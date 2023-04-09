@@ -54,17 +54,17 @@ let server = () => {
 }
 
 
-const yarg = yargs.command('server', 'Es un comando para levantar un servidor localmente',
+const yarg = yargs.command('server', 'It is used to run the server if the provided key is correct',
     {
         key: {
-            describe: 'Se utiliza para validar la ejecucion',
+            describe: 'validates execution',
             demand: true,
             alias: 'k',
         },
     },
     (args) => {
         args.key == key ?
-            server() : console.log('Key incorrecta')
+            server() : console.log('Wrong Key')
     })
     .help().argv
 
